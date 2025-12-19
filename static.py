@@ -5,7 +5,7 @@ from helpers.closest_shops_to_location import closest_shops_to_location
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Find closest locations to given coordinates"
+        description="Find closest coffee shops to given coordinates"
     )
     
     parser.add_argument("y", type=float, help="Y coordinate")

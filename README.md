@@ -42,3 +42,5 @@ Starbucks Seattle2,0.0645
 Starbucks Seattle,0.0861
 Starbucks SF,10.0793
 ```
+
+## Running the solution

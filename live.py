@@ -6,7 +6,7 @@ from helpers.closest_shops_to_location import closest_shops_to_location
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Find closest locations to given coordinates"
+        description="Find closest coffee shops to your current location"
     )
     parser.add_argument("url", type=str, help="Shop data url")
 
