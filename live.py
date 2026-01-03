@@ -1,8 +1,7 @@
 import argparse
-import pandas as pd
 
-from helpers.get_live_location import get_live_location
-from helpers.closest_shops_to_location import closest_shops_to_location
+from helpers.live_location import get_live_location
+from helpers import run_finder
 
 def main():
     parser = argparse.ArgumentParser(
@@ -14,10 +13,7 @@ def main():
 
     my_location = get_live_location()
 
-    data = pd.read_csv(args.url, names=['Name', 'Y', 'X'], dtype={'Name': str, 'Y': float, 'X': float})
-
-    result = closest_shops_to_location(data, my_location[0], my_location[1])
-    print(result[["Name", "distance"]].to_csv(index=False, header=False).strip())
-
+    run_finder(args.url, my_location[0], my_location[1])
+    
 if __name__ == "__main__":
     main()

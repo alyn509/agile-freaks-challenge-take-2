@@ -1,7 +1,6 @@
 import argparse
-import pandas as pd
 
-from helpers.closest_shops_to_location import closest_shops_to_location
+from helpers import run_finder
 
 def main():
     parser = argparse.ArgumentParser(
@@ -14,10 +13,7 @@ def main():
 
     args = parser.parse_args()
 
-    data = pd.read_csv(args.url, names=['Name', 'Y', 'X'], dtype={'Name': str, 'Y': float, 'X': float})
-
-    result = closest_shops_to_location(data, args.y, args.x)
-    print(result[["Name", "distance"]].to_csv(index=False, header=False).strip())
-
+    run_finder(args.url, args.y, args.x)
+    
 if __name__ == "__main__":
     main()
