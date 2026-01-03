@@ -1,27 +1,22 @@
 ## Overview
 
-You have been hired by a company that builds a app for coffee addicts.  You are 
-responsible for taking the user’s location and returning a list of the three closest coffee shops.
+You have been hired by a company that builds a app for coffee addicts. You are responsible for taking the user’s location and returning a list of the three closest coffee shops.
 
 ## Input
 
 The coffee shop list is a comma separated file with rows of the following form:
 `Name,Y Coordinate,X Coordinate`
 
-The quality of data in this list of coffee shops may vary.  Malformed entries should cause the 
-program to exit appropriately. 
+The quality of data in this list of coffee shops may vary. Malformed entries should cause the program to exit appropriately. 
 
-Your program will be executed directly from the command line and will be provided three 
-arguments in the following order:
+Your program will be executed directly from the command line and will be provided three arguments in the following order:
 `<user x coordinate> <user y coordinate> <shop data url>`
 
 Notice that the data file will be read from an network location (ex: https://raw.githubusercontent.com/Agilefreaks/test_oop/master/coffee_shops.csv)
 
 ## Output
 
-Write a program that takes the user’s coordinates encoded as listed above and prints out a 
-newline­separated list of the three closest coffee shops (including distance from the user) in 
-order of closest to farthest.  These distances should be rounded to four decimal places. 
+Write a program that takes the user’s coordinates encoded as listed above and prints out a newline­separated list of the three closest coffee shops (including distance from the user) in order of closest to farthest. These distances should be rounded to four decimal places. 
 
 Assume all coordinates lie on a plane.
 
@@ -41,4 +36,18 @@ __Expected output__
 Starbucks Seattle2,0.0645
 Starbucks Seattle,0.0861
 Starbucks SF,10.0793
+```
+
+## Running the solution
+
+The program is designed with two modes of operation:
+
+1. Static mode, which requires the user to provide their current location as command-line parameters. For example:
+```
+python static.py 47.6 -122.4 https://raw.githubusercontent.com/Agilefreaks/test_oop/master/coffee_shops.csv
+```
+
+2. Live mode, which automatically determines the caller’s current location at runtime. It can be executed as follows:
+```
+python live.py https://raw.githubusercontent.com/Agilefreaks/test_oop/master/coffee_shops.csv
 ```
