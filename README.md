@@ -40,14 +40,14 @@ Starbucks SF,10.0793
 
 ## Running the solution
 
-The program is composed to have 2 versions:
+The program is designed with two modes of operation:
 
-1. A static version from which the current positions is required as parameters, like in the example below
+1. Static mode, which requires the user to provide their current location as command-line parameters. For example:
 ```
 python static.py 47.6 -122.4 https://raw.githubusercontent.com/Agilefreaks/test_oop/master/coffee_shops.csv
 ```
 
-2. A live version that takes the current location of the caller. This can be runned like the following example
+2. Live mode, which automatically determines the caller’s current location at runtime. It can be executed as follows:
 ```
 python live.py https://raw.githubusercontent.com/Agilefreaks/test_oop/master/coffee_shops.csv
 ```
