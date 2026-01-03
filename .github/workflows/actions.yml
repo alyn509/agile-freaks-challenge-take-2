@@ -24,7 +24,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
       env:
-        IP_STACK_ACCESS_KEY: ${{ secrets.IP_STACK_ACCESS_KEY }}
+        IP_STACK_ACCESS_KEY: ${{ AGILE_FREAKS_SECRETS.IP_STACK_ACCESS_KEY }}
 
     - name: Run unit tests
       run: |
